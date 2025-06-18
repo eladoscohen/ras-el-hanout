@@ -212,7 +212,7 @@ body {
     top: 0;
     width: 0%;
     height: 100%;
-    background: white;
+    background: #C08235;
     z-index: 0;
     transition: width 0.4s ease;
   }
@@ -222,10 +222,6 @@ body {
     width: 100%;
   }
   
-  /* Keep text visible above background */
-  .hero-buttons button:hover {
-    color: black;
-  }
   
   /* Ensure text is above the animated background */
   .hero-buttons button span,
