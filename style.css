@@ -273,8 +273,8 @@ body {
   
   /* Span definitions */
   .gallery-grid .wide {
-    grid-column: span 8;
-    grid-row: span 4;
+    grid-column: span 6;
+    grid-row: span 3;
   }
   
   .gallery-grid .tall {
@@ -288,8 +288,8 @@ body {
   }
   
   .gallery-grid .square {
-    grid-column: span 4;
-    grid-row: span 4;
+    grid-column: span 3;
+    grid-row: span 3;
   }
   
   /* Responsive tweaks */
