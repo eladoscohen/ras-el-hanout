@@ -24,5 +24,7 @@ window.addEventListener('load', revealOnScroll);
 
 function toggleMenu() {
     const drawer = document.getElementById('menuDrawer');
+    const burger = document.getElementById('hamburger');
     drawer.classList.toggle('open');
+    burger.classList.toggle('open');
   }
