@@ -272,12 +272,6 @@ body {
     }
   }
   
-  @media (max-width: 480px) {
-    .mosaic-gallery {
-      column-count: 1;
-    }
-  }
-  
   
 /* Fade-up animation on scroll */
 .fade-up {
