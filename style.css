@@ -10,24 +10,32 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.4);
+    /* backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4); */
   }
   
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: white;
-    position: relative;
+    width: 200px;
   }
   
 /* Base hamburger layout */
+.hamburger {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+  }
+  
 .hamburger span {
     height: 3px;
     width: 25px;
@@ -174,7 +182,7 @@ body {
   .shows,
   .about {
     padding: 4rem 2rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
