@@ -25,6 +25,17 @@ window.addEventListener('load', revealOnScroll);
 function toggleMenu() {
     const drawer = document.getElementById('menuDrawer');
     const burger = document.getElementById('hamburger');
-    drawer.classList.toggle('open');
-    burger.classList.toggle('open');
+  
+    if (drawer && burger) {
+        console.log("open init");
+      drawer.classList.toggle('open');
+      burger.classList.toggle('open');
+    }
   }
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('hamburger');
+    if (burger) {
+      burger.addEventListener('click', toggleMenu);
+    }
+  });
