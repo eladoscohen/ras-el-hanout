@@ -10,7 +10,7 @@ function playShowreel() {
 const faders = document.querySelectorAll('.fade-up');
 
 function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 1;
+  const triggerBottom = window.innerHeight * 2;
   faders.forEach(el => {
     const boxTop = el.getBoundingClientRect().top;
     if (boxTop < triggerBottom) {
