@@ -171,19 +171,63 @@ body {
   }
   
   .hero-buttons button {
-    margin: 0.5rem;
-    padding: 1rem 2rem;
-    background: #85a693;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
     border: none;
     color: white;
+    border: 1px solid #fff;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s;
   }
   
+  .hero-buttons button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.75rem 2rem;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  
+  /* Create animated background */
+  .hero-buttons button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: white;
+    z-index: 0;
+    transition: width 0.4s ease;
+  }
+  
+  /* On hover, grow the background from left */
+  .hero-buttons button:hover::before {
+    width: 100%;
+  }
+  
+  /* Keep text visible above background */
   .hero-buttons button:hover {
-    background: #6c887a;
+    color: black;
+  }
+  
+  /* Ensure text is above the animated background */
+  .hero-buttons button span,
+  .hero-buttons button {
+    z-index: 1;
   }
   
   .spotify-section,
