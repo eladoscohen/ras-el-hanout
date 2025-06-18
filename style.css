@@ -337,4 +337,7 @@ body {
     .hero {
       height: 50vh;
     }
+    .spotify-section{
+      padding: 2rem 5%;
+    }
   }
