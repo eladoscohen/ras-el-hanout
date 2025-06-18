@@ -80,7 +80,7 @@ body {
     box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
     z-index: 999;
     transition: left 0.5s ease;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   
@@ -169,7 +169,10 @@ body {
     font-size: 4rem;
     margin-bottom: 1rem;
   }
-  
+  .hero-buttons{
+    display: flex;
+    gap: 2rem;
+  }
   .hero-buttons button {
     display: flex;
     justify-content: center;
@@ -180,8 +183,6 @@ body {
     border: 1px solid #fff;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
   }
   
   .hero-buttons button {
