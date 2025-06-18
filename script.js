@@ -21,3 +21,8 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+function toggleMenu() {
+    const drawer = document.getElementById('menuDrawer');
+    drawer.classList.toggle('open');
+  }

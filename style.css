@@ -4,6 +4,115 @@ body {
     background-color: #111;
     color: white;
   }
+  /* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    position: relative;
+  }
+  
+  .hamburger {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Menu Drawer */
+  .menu-drawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: linear-gradient(135deg, #111 20%, #333);
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    transition: left 0.5s ease;
+    padding: 4rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .menu-drawer.open {
+    left: 0;
+  }
+  
+  .menu-drawer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-drawer li {
+    margin: 1.5rem 0;
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+  }
+  
+  .menu-drawer li:nth-child(1) { animation-delay: 0.1s; }
+  .menu-drawer li:nth-child(2) { animation-delay: 0.2s; }
+  .menu-drawer li:nth-child(3) { animation-delay: 0.3s; }
+  .menu-drawer li:nth-child(4) { animation-delay: 0.4s; }
+  .menu-drawer li:nth-child(5) { animation-delay: 0.5s; }
+  
+  .menu-drawer a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .menu-drawer a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #85a693;
+    transition: width 0.3s;
+  }
+  
+  .menu-drawer a:hover::after {
+    width: 100%;
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
   
   .hero {
     position: relative;
