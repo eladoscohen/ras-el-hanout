@@ -320,6 +320,11 @@ body {
     clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 95%);
     filter: grayscale(0%) brightness(1.2);
   }
+
+  .site-header.scrolled {
+    background: rgba(0, 0, 0, 0.5); /* When not at top */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
   
   
   @keyframes fadeIn {

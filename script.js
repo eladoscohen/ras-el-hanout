@@ -39,3 +39,13 @@ function toggleMenu() {
       burger.addEventListener('click', toggleMenu);
     }
   });
+
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
