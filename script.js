@@ -51,7 +51,7 @@ function toggleMenu() {
   
   document.addEventListener("DOMContentLoaded", function () {
     new Masonry('.masonry-grid', {
-      itemSelector: '.grid-item',
+      itemSelector: '.item',
       gutter: 0,
       percentPosition: true
     });
