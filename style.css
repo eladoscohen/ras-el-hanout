@@ -241,7 +241,7 @@ body {
   
   .mosaic-gallery {
     column-count: 4;
-    column-gap: 0;
+    column-gap: 6px; /* tiny horizontal gap between columns */
     padding: 0;
   }
   
@@ -249,8 +249,8 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 0;
-    border-radius: 6px;
+    margin-bottom: 6px; /* tiny vertical gap between stacked images */
+    border-radius: 8px;
     transition: transform 0.3s ease;
     break-inside: avoid;
   }
@@ -272,6 +272,11 @@ body {
     }
   }
   
+  @media (max-width: 480px) {
+    .mosaic-gallery {
+      column-count: 1;
+    }
+  }
   
 /* Fade-up animation on scroll */
 .fade-up {
