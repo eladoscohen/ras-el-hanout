@@ -179,31 +179,27 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 150%; /* Keep your parallax effect */
+    height: 150%; /* for parallax */
     z-index: -1;
     overflow: hidden;
   }
   
-  .video-cover {
+  .parallax-video iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.78vh; /* 100vh * 16 / 9 to fill vertical */
+    height: 100vh;
   
-  .video-cover iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    /* fallback for wide screens */
+    min-width: 100vw;
+    min-height: 100vh;
+  
     border: none;
     pointer-events: none;
   }
+  
   
   
   
