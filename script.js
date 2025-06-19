@@ -13,10 +13,24 @@ function playShowreel() {
   function revealOnScroll() {
     faders.forEach(el => {
       const rect = el.getBoundingClientRect();
-      const triggerPoint = window.innerHeight * 0.8; // 80% down the viewport
-  
+      const triggerPoint = window.innerHeight * 0.8;
       if (rect.top < triggerPoint) {
         el.classList.add('in-view');
+  
+        // Lazy-load Spotify iframe when in view
+        if (el.classList.contains('spotify-facade') && el.dataset.loaded !== 'true') {
+          el.innerHTML = `
+            <iframe
+              src="https://open.spotify.com/embed/artist/1PkpTahGsmKBs4RadyK0EB?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          `;
+          el.dataset.loaded = 'true';
+        }
       }
     });
   }
