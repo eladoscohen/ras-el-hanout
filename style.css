@@ -791,7 +791,7 @@ body {
 .responsive-video {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 7; /* Or 16 / 6 */
   border-radius: 10px;
   overflow: hidden;
   background: #000;
