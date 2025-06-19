@@ -19,7 +19,7 @@ body {
   
   .header-icons {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
     width: 10%;
   }
@@ -29,6 +29,8 @@ body {
   
   .header-icons a svg {
     transition: transform 0.2s ease;
+    width: 28px;
+    height: 28px;
   }
   
   .header-icons a:hover svg {
