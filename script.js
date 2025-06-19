@@ -9,13 +9,13 @@ function playShowreel() {
   
   // Fade-up on scroll
   const faders = document.querySelectorAll('.fade-up');
-
+  
   function revealOnScroll() {
     faders.forEach(el => {
       const rect = el.getBoundingClientRect();
-      const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      
-      if (isFullyVisible) {
+      const triggerPoint = window.innerHeight * 0.8; // 80% down the viewport
+  
+      if (rect.top < triggerPoint) {
         el.classList.add('in-view');
       }
     });
