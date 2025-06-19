@@ -642,10 +642,89 @@ body {
 
 .form-status {
   margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #c0c0c0;
+  border: 1px solid #c08235;
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #c08235;
+  background: #fff;
+  border-radius: 10px;
+
 }
 
 .top{
   object-position: top;
+}
+
+.contact-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.contact-section .section-title {
+  font-size: 2.2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.contact-section .section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  margin: 0.5rem auto 0;
+  background: #183052;
+}
+
+.contact-section .section-description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 260px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+}
+
+.contact-card .icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+}
+
+.contact-card svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-card h3 {
+  margin-bottom: 0.5rem;
+  color: #183052;
+}
+
+.contact-card p a {
+  color: #C08235;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card p a:hover {
+  text-decoration: underline;
 }
