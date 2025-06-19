@@ -790,6 +790,9 @@ body {
   border-radius: 10px;
 }
 
+.header-icons{
+  visibility: hidden;
+}
 
 @media screen and (max-width: 700px) {
   .video-clip-bottom,
@@ -843,6 +846,12 @@ body {
 .show-card p{
   width: 20%;
   margin: 0;
+}
+.header-icons{
+  visibility: hidden;
+}
+.menu-drawer .header-icons{
+  visibility: visible ;
 }
 
 }
