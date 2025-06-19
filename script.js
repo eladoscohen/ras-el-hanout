@@ -127,3 +127,27 @@ function toggleMenu() {
   document.querySelectorAll('#menuDrawer a[href^="#"]').forEach(link => {
     link.addEventListener('click', toggleMenu);
   });
+
+  window.addEventListener('load', () => {
+    const container = document.getElementById('hero-video');
+    if (container) {
+      container.innerHTML = `
+        <video autoplay muted loop playsinline preload="none" style="width:100%; height:100%; object-fit:cover;">
+          <source src="video/Ras Showreel.mp4" type="video/mp4">
+        </video>
+      `;
+    }
+  
+    // Attach parallax scroll after video is injected
+    window.addEventListener('scroll', () => {
+      const video = document.querySelector('#hero-video video');
+      if (video) {
+        const scrollY = window.scrollY;
+        video.style.transform = `translateY(${scrollY * 0.3}px)`;
+      }
+    });
+  });
+  
+
+
+  
