@@ -833,5 +833,8 @@ body {
 .release-info .button{
   width: 100%;
 }
+.release-content{
+  padding: 1rem 0;
+}
 
 }
