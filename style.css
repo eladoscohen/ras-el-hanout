@@ -853,5 +853,10 @@ body {
 .menu-drawer .header-icons{
   visibility: visible ;
 }
+.countdown div{
+  flex: 1 1 25%;
+  min-width: none;
+  width: 25%;
+}
 
 }
