@@ -219,7 +219,7 @@ body {
   }
   
   /* Create animated background */
-  .hero-buttons button::before {
+  .hero-buttons button::before , .button::before{
     content: "";
     position: absolute;
     left: 0;
@@ -232,7 +232,7 @@ body {
   }
   
   /* On hover, grow the background from left */
-  .hero-buttons button:hover::before {
+  .hero-buttons button:hover::before, .button:hover::before {
     width: 100%;
   }
   
