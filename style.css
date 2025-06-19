@@ -810,6 +810,10 @@ body {
   }
 
   .about-text{
-      max-width: 95%;
+      max-width: 90%;
   }
+  .shows-section {
+    padding: 4rem 0;
+}
+
 }
