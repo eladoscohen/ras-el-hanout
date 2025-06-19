@@ -842,9 +842,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: top;
+  transform: scale(1.1);
 }
-
 .play-btn {
   position: absolute;
   top: 50%;
@@ -852,7 +852,7 @@ body {
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_play.png') no-repeat center center;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/ef/YouTube_play_button_icon_(2013-2017).svg') no-repeat center center;
   background-size: contain;
   pointer-events: none;
 }
