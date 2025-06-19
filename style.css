@@ -5,19 +5,32 @@ body {
     color: #000;
   }
   /* Header */
-.site-header {
+
+  .site-header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    padding: 0;
+    background: transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 1000;
-    /* backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.4); */
   }
+  
+  .header-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .header-icons a svg {
+    transition: transform 0.2s ease;
+  }
+  
+  .header-icons a:hover svg {
+    transform: scale(1.2);
+  }
+  
   
   .logo {
     width: 200px;
@@ -248,6 +261,9 @@ body {
     padding: 4rem 2rem;
     max-width: 1100px;
     margin: 0 auto;
+  }
+  .gallery, .spotify-section{
+    text-align: center;
   }
   .gallery-grid {
     display: grid;
