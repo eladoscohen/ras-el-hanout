@@ -343,7 +343,7 @@ body {
     justify-content: center;
     gap: 3rem;
     padding: 5rem 2rem;
-    background: radial-gradient(circle at top left, #1e1e1e, #111);
+    background: #0E2243;
   }
   
   .about-text {
@@ -406,7 +406,6 @@ body {
   padding: 4rem 2rem;
   color: white;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 /* Title styling */
