@@ -447,7 +447,7 @@ body {
   margin-top: 0.5rem ;
   background: #c08235;
 }
-.section-title.fade-up::after {
+.section-title.in-view::after {
   width: 75%;
 }
 
