@@ -565,9 +565,9 @@ body {
 }
 
 .track-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #c08235;
-  margin: 1rem 0 0.5rem;
+  margin: rem 0 0.5rem;
 }
 
 .track-desc {
@@ -576,8 +576,8 @@ body {
 }
 
 .release-date {
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 1.5rem;
+  color: #000;
   margin-bottom: 1rem;
 }
 
