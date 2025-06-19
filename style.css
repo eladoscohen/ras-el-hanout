@@ -836,5 +836,13 @@ body {
 .release-content{
   padding: 1rem 0;
 }
+.show-card h3{
+  width: 65%;
+  margin: 0;
+}
+.show-card p{
+  width: 20%;
+  margin: 0;
+}
 
 }
