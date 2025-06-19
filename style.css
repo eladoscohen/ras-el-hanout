@@ -240,8 +240,7 @@ body {
   
   .spotify-section,
   .gallery,
-  .shows,
-  .about {
+  .shows {
     padding: 4rem 2rem;
     max-width: 1100px;
     margin: 0 auto;
