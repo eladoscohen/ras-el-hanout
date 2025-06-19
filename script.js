@@ -1,3 +1,4 @@
+
 function playShowreel() {
     alert("Play showreel clicked - replace with modal or video popup logic");
   }
@@ -23,6 +24,7 @@ function playShowreel() {
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
   
+  /* Menu */
 
 function toggleMenu() {
     const drawer = document.getElementById('menuDrawer');
@@ -51,6 +53,7 @@ function toggleMenu() {
     }
   });
   
+  /* New Release Timer */
 
   function startCountdown(releaseDateStr) {
     const countdownEl = document.getElementById('countdown');
@@ -80,6 +83,7 @@ function toggleMenu() {
     setInterval(updateTimer, 1000);
   }
   
+  /* Newsletter Form */
   window.addEventListener('DOMContentLoaded', function () {
     startCountdown("2025-07-20T00:00:00"); // Set your actual release date/time
   });
@@ -106,5 +110,14 @@ function toggleMenu() {
       console.error('Error:', err);
       status.textContent = "Something went wrong. Please try again later.";
     });
+  });
+  
+  /* Parllex main banner */
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const video = document.querySelector('.parallax-video video');
+    if (video) {
+      video.style.transform = `translateY(${scrollY * 0.3}px)`; // adjust speed
+    }
   });
   
