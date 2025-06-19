@@ -341,7 +341,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 5rem;
     background: #0E2243;
     color: #fff;
   }
@@ -359,7 +359,7 @@ body {
   }
   
   .about-image img {
-    max-width: 400px;
+    max-width: 410px;
     width: 100%;
     clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%);
     transform: scale(1);
@@ -499,4 +499,99 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.release-section {
+  background: #0E2243;
+  color: #fff;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.release-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.release-info {
+  flex: 1 1 50%;
+}
+
+.release-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.release-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.countdown {
+  display: flex;
+  gap: 1.5rem;
+  font-family: 'Assistant', sans-serif;
+  margin: 1rem 0 2rem;
+}
+
+.countdown div {
+  background: #183052;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.countdown span {
+  display: block;
+  font-size: 2rem;
+  color: #c08235;
+  font-weight: bold;
+}
+
+.countdown label {
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+.track-title {
+  font-size: 1.5rem;
+  color: #c08235;
+  margin: 1rem 0 0.5rem;
+}
+
+.track-desc {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.release-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .release-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .release-info {
+    flex: 1 1 100%;
+  }
+
+  .release-image {
+    flex: 1 1 100%;
+  }
 }
