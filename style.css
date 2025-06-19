@@ -620,11 +620,13 @@ body {
 
   .release-info {
     flex: 1 1 100%;
+    width: 100%;
   }
 
   .release-image {
     flex: 1 1 100%;
   }
+
 }
 
 .newsletter-section {
