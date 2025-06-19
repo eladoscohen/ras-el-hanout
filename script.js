@@ -7,20 +7,22 @@ function playShowreel() {
   }
   
   // Fade-up on scroll
-const faders = document.querySelectorAll('.fade-up');
+  const faders = document.querySelectorAll('.fade-up');
 
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 2;
-  faders.forEach(el => {
-    const boxTop = el.getBoundingClientRect().top;
-    if (boxTop < triggerBottom) {
-      el.classList.add('in-view');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+  function revealOnScroll() {
+    faders.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      
+      if (isFullyVisible) {
+        el.classList.add('in-view');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+  
 
 function toggleMenu() {
     const drawer = document.getElementById('menuDrawer');
