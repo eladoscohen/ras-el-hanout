@@ -554,6 +554,13 @@ body {
   flex: 1 1 50%;
 }
 
+.release-info .button{
+  border: 1px solid #000;
+  color: #000;
+  margin: 40px auto;
+}
+
+
 .release-image {
   flex: 1 1 40%;
   text-align: center;
@@ -564,6 +571,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
 
 .countdown {
   display: flex;
@@ -820,6 +828,10 @@ body {
     justify-content: center;
     gap: 1.5rem;
     padding: 1rem;
+}
+
+.release-info .button{
+  width: 100%;
 }
 
 }
