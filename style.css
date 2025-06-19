@@ -798,12 +798,13 @@ body {
   top: 0;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
+
   .video-clip-bottom,
   .video-clip-top {
     height: 60px;
   }
-}
 
+  .about-text{
+      max-width: 95%;
+  }
 }
