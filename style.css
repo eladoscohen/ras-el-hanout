@@ -346,6 +346,7 @@ body {
     background: #0E2243;
     color: #fff;
     padding-bottom: 170px;
+    position: relative;
   }
   
   .about-text {
