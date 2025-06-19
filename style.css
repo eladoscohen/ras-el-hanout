@@ -649,7 +649,7 @@ body {
   color: #c08235;
   background: #fff;
   border-radius: 10px;
-
+  display: none;
 }
 
 .top{

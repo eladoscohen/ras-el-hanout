@@ -96,6 +96,8 @@ function toggleMenu() {
     .then(response => response.text())
     .then(text => {
       status.textContent = "Thanks for subscribing!";
+      status.style.display = "block";
+
       form.reset();
     })
     .catch(err => {
