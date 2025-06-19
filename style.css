@@ -212,6 +212,7 @@ body {
   }
   
   .hero-buttons button,
+  .hero-buttons a,
   .button {
     display: flex;
     justify-content: center;
@@ -228,7 +229,7 @@ body {
     position: relative;
   }
   
-  .hero-buttons button {
+  .hero-buttons button,  .hero-buttons a {
     position: relative;
     overflow: hidden;
     padding: 0.75rem 2rem;
@@ -237,7 +238,7 @@ body {
   }
   
   .hero-buttons button::before,
-  .button::before {
+  .button::before,   .hero-buttons a::before{
     content: "";
     position: absolute;
     left: 0;
