@@ -342,13 +342,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 5rem 2rem;
     background: #0E2243;
     color: #fff;
   }
   
   .about-text {
-    max-width: 500px;
+    max-width: 650px;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: left;
