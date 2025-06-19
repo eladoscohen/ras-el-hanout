@@ -452,7 +452,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 500px;
+  max-width: 1000px;
   display: flex;
   align-items: center;
 }
@@ -480,6 +480,9 @@ body {
   .shows-grid {
     flex-direction: column;
     align-items: center;
+  }
+  .show-card {
+    max-width: 90%;
   }
 }
 
