@@ -284,8 +284,7 @@ body {
   
   .spotify-section,
   .gallery,
-  .shows,
-  .release-content {
+  .shows {
     padding: 1rem;
     max-width: 1100px;
     margin: 0 auto;
@@ -572,6 +571,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .release-info {
