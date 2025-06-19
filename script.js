@@ -113,11 +113,13 @@ function toggleMenu() {
   });
   
   /* Parllex main banner */
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
+  window.addEventListener('load', () => {
     const video = document.querySelector('.parallax-video video');
     if (video) {
-      video.style.transform = `translateY(${scrollY * 0.3}px)`; // adjust speed
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        video.style.transform = `translateY(${scrollY * 0.3}px)`;
+      });
     }
   });
   
