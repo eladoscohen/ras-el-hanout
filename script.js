@@ -164,20 +164,32 @@ function toggleMenu() {
   
 
 
-  document.querySelectorAll('.youtube-facade').forEach(el => {
-    el.addEventListener('click', function () {
-      const videoId = el.dataset.id;
-      el.innerHTML = `
-        <iframe
-          src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-          title="YouTube video"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          loading="lazy"
-          style="width:100%; height:100%; aspect-ratio:16/9;">
-        </iframe>
-      `;
-      el.classList.add('loaded');
+  document.addEventListener("DOMContentLoaded", function () {
+    const observers = document.querySelectorAll(".spotify-embed");
+  
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const container = entry.target;
+          const src = container.getAttribute("data-src");
+  
+          if (!container.querySelector("iframe")) {
+            const iframe = document.createElement("iframe");
+            iframe.src = src;
+            iframe.style.borderRadius = "12px";
+            iframe.width = "100%";
+            iframe.height = "80";
+            iframe.frameBorder = "0";
+            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+            iframe.loading = "lazy";
+  
+            container.appendChild(iframe);
+          }
+  
+          obs.unobserve(container); // only load once
+        }
+      });
     });
+  
+    observers.forEach(el => observer.observe(el));
   });
