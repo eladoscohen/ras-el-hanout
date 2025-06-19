@@ -194,3 +194,27 @@ function toggleMenu() {
 
     lazySpotifyEmbeds.forEach(el => observer.observe(el));
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const facades = document.querySelectorAll(".youtube-facade");
+  
+    facades.forEach(facade => {
+      facade.addEventListener("click", function () {
+        const videoId = this.dataset.id;
+  
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.frameBorder = "0";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.loading = "lazy";
+  
+        const parent = this.parentElement;
+        parent.innerHTML = ""; // Clear thumbnail
+        parent.appendChild(iframe);
+      });
+    });
+  });
+  
