@@ -21,6 +21,10 @@ body {
     display: flex;
     gap: 1rem;
     align-items: center;
+    width: 10%;
+  }
+  .hamburger-cont{
+    width: 10%;
   }
   
   .header-icons a svg {
