@@ -196,7 +196,6 @@ function toggleMenu() {
   });
 
 
-  <script>
   document.addEventListener("DOMContentLoaded", function () {
     const facades = document.querySelectorAll(".youtube-facade");
 
@@ -225,4 +224,3 @@ function toggleMenu() {
       });
     });
   });
-</script>
