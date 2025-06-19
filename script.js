@@ -150,4 +150,20 @@ function toggleMenu() {
   
 
 
-  
+  document.querySelectorAll('.youtube-facade').forEach(el => {
+    el.addEventListener('click', function () {
+      const videoId = el.dataset.id;
+      el.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+          title="YouTube video"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          loading="lazy"
+          style="width:100%; height:100%; aspect-ratio:16/9;">
+        </iframe>
+      `;
+      el.classList.add('loaded');
+    });
+  });

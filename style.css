@@ -875,3 +875,32 @@ body {
 }
 
 }
+
+
+.youtube-facade {
+  position: relative;
+  display: block;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  background: #000;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.youtube-facade img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.youtube-facade .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/YouTube_play_button_icon.svg') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+}
