@@ -82,3 +82,25 @@ function toggleMenu() {
     startCountdown("2025-07-20T00:00:00"); // Set your actual release date/time
   });
   
+  document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+  
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    const data = new FormData(form);
+  
+    fetch('https://script.google.com/macros/s/AKfycbwJ4-5fUA9DdithzywYzLLVpCtfPz4sJijU3p4vzL4ozhgo5ZASqhnfYygOtwTy658y/exec', {
+      method: 'POST',
+      body: data,
+    })
+    .then(response => response.text())
+    .then(text => {
+      status.textContent = "Thanks for subscribing!";
+      form.reset();
+    })
+    .catch(err => {
+      console.error('Error:', err);
+      status.textContent = "Something went wrong. Please try again later.";
+    });
+  });
+  
