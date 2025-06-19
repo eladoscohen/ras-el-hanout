@@ -447,9 +447,13 @@ body {
   content: "";
   display: block;
   height: 3px;
-  width: 75%;
+  width: 0%;
+  transition: width 0.3s ease;
   margin-top: 0.5rem ;
   background: #c08235;
+}
+.section-title.fade-up::after {
+  width: 75%;
 }
 
 .shows-section {
@@ -627,7 +631,7 @@ body {
 .newsletter-section {
   background: #183052;
   color: #fff;
-  padding: 4rem 2rem;
+  padding: 10rem 2rem 4rem 2rem;
   text-align: center;
   position: relative;
 }
