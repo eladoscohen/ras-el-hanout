@@ -26,6 +26,7 @@ body {
     gap: 1.5rem;
     align-items: center;
     width: 10%;
+    visibility: hidden;
   }
   .hamburger-cont{
     width: 10%;
@@ -790,9 +791,7 @@ body {
   border-radius: 10px;
 }
 
-.header-icons{
-  visibility: hidden;
-}
+
 
 @media screen and (max-width: 700px) {
   .video-clip-bottom,
