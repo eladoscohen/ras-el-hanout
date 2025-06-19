@@ -195,13 +195,15 @@ function toggleMenu() {
     lazySpotifyEmbeds.forEach(el => observer.observe(el));
   });
 
+
+  <script>
   document.addEventListener("DOMContentLoaded", function () {
     const facades = document.querySelectorAll(".youtube-facade");
-  
+
     facades.forEach(facade => {
       facade.addEventListener("click", function () {
         const videoId = this.dataset.id;
-  
+
         const iframe = document.createElement("iframe");
         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
         iframe.width = "100%";
@@ -210,11 +212,17 @@ function toggleMenu() {
         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
         iframe.allowFullscreen = true;
         iframe.loading = "lazy";
-  
-        const parent = this.parentElement;
-        parent.innerHTML = ""; // Clear thumbnail
-        parent.appendChild(iframe);
+        iframe.style.position = "absolute";
+        iframe.style.top = "0";
+        iframe.style.left = "0";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.borderRadius = "10px";
+
+        const container = this.parentElement;
+        container.innerHTML = "";
+        container.appendChild(iframe);
       });
     });
   });
-  
+</script>
