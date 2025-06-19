@@ -227,12 +227,12 @@ body {
     height: 50px;
     text-decoration: none;
     position: relative;
+    padding: 0;
   }
   
   .hero-buttons button,  .hero-buttons a {
     position: relative;
     overflow: hidden;
-    padding: 0.75rem 2rem;
     z-index: 1;
     transition: color 0.3s;
   }
