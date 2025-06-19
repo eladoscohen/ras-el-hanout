@@ -854,8 +854,9 @@ body {
 }
 .countdown div{
   flex: 1 1 25%;
-  min-width: none;
+  min-width: min-content;
   width: 25%;
+  padding: .5rem;
 }
 
 }
