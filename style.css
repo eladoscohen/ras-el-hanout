@@ -772,3 +772,34 @@ body {
   height: 100%;
   border: 0;
 }
+
+
+@media screen and (max-width: 700px) {
+  .video-clip-bottom,
+.video-clip-top {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+
+.video-clip-bottom {
+  bottom: 0;
+}
+
+.video-clip-top {
+  top: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .video-clip-bottom,
+  .video-clip-top {
+    height: 60px;
+  }
+}
+
+}
