@@ -12,6 +12,7 @@ body {
   h1 {
     font-size: 1.5rem; /* or whatever fits your layout */
     line-height: 1.2;
+    color: #c08235;
   }
 
   .site-header {
