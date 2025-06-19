@@ -645,3 +645,7 @@ body {
   font-size: 0.9rem;
   color: #c0c0c0;
 }
+
+.top{
+  object-position: top;
+}
