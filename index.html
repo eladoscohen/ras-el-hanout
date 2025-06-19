@@ -57,25 +57,28 @@
 </nav>
 
 
-  <!-- Hero Section with Background Video -->
-  <section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
+<!-- Hero Section with Background Video -->
+<section class="hero">
+  <div class="parallax-video">
+    <video autoplay muted loop playsinline>
       <source src="video/Ras Showreel FIX.mp4" type="video/mp4" />
     </video>
-    <div class="hero-overlay">
-      <div class="hero-buttons fade-up">
-        <button onclick="playShowreel()"><span>Play Showreel</span></button>
-        <button onclick="bookShow()"><span>Book a Show</span></button>
-      </div>
-    </div>
+  </div>
 
-    <div class="video-clip-bottom">
-      <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
-        <path d="M0,0 C400,100 1200,0 1600,100 L1600,120 L0,120 Z" fill="#fff"></path>
-      </svg>
+  <div class="hero-overlay">
+    <div class="hero-buttons fade-up">
+      <button onclick="playShowreel()"><span>Play Showreel</span></button>
+      <button onclick="bookShow()"><span>Book a Show</span></button>
     </div>
+  </div>
 
-  </section>
+  <div class="video-clip-bottom">
+    <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+      <path d="M0,0 C400,100 1200,0 1600,100 L1600,120 L0,120 Z" fill="#fff"></path>
+    </svg>
+  </div>
+</section>
+
 
   <!-- Spotify Widget -->
   <section class="spotify-section fade-up">
