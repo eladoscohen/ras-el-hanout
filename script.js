@@ -9,7 +9,7 @@ function playShowreel() {
   
   // Fade-up on scroll
   const faders = document.querySelectorAll('.fade-up');
-  
+
   function revealOnScroll() {
     faders.forEach(el => {
       const rect = el.getBoundingClientRect();
@@ -121,3 +121,7 @@ function toggleMenu() {
     }
   });
   
+  /* close menu on link click */
+  document.querySelectorAll('#menuDrawer a[href^="#"]').forEach(link => {
+    link.addEventListener('click', toggleMenu);
+  });
