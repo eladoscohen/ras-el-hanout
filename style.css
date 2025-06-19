@@ -251,7 +251,9 @@ body {
   }
   
   .hero-buttons button:hover::before,
-  .button:hover::before {
+  .hero-buttons a:hover::before,
+  .button:hover::before
+  {
     width: 100%;
   }
   
