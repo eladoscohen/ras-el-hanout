@@ -74,7 +74,7 @@ body {
   
   /* Transform into X */
   .hamburger.open span:nth-child(1) {
-    transform: rotate(49deg) translate(6px, 6px);
+    transform: rotate(49deg) translate(7px, 6px);
   }
   
   .hamburger.open span:nth-child(2) {
