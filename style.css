@@ -9,6 +9,11 @@ body {
   }
   /* Header */
 
+  h1 {
+    font-size: 1.5rem; /* or whatever fits your layout */
+    line-height: 1.2;
+  }
+
   .site-header {
     position: fixed;
     top: 0;
