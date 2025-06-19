@@ -211,7 +211,6 @@ body {
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
     padding: 0.75rem 2rem;
     z-index: 1;
     transition: color 0.3s;
