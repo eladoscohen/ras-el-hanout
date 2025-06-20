@@ -226,7 +226,12 @@ body {
   
   
   .hero-overlay {
-    position: relative;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%,-50%);
     z-index: 1;
     height: 100%;
     display: flex;
