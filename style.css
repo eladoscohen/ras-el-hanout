@@ -399,7 +399,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    /* gap: 5rem; */
   }
   
   .about-text {
@@ -424,6 +424,7 @@ body {
     max-width: 100%;
     width: 100%;
     aspect-ratio: 1365 / 2048;
+    object-fit: contain;
   }
   
   .about-image img:hover {
