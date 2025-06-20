@@ -399,7 +399,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* gap: 5rem; */
+    gap: 5%;
+    margin: 0 auto;
   }
   
   .about-text {
@@ -413,7 +414,7 @@ body {
     margin-bottom: 1rem;
   }
   .about-image{
-    width: 40%;;
+    width: 35%;;
   }
   .about-image img {
     clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%);
