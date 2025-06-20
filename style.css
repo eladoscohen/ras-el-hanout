@@ -388,19 +388,22 @@ body {
   
   /* About Section Enhancements */
   .about {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
     background: #0E2243;
     color: #fff;
     padding-bottom: 170px;
     position: relative;
   }
+  .about-cont{
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
   
   .about-text {
-    max-width: 650px;
+    width: 60%;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: left;
@@ -409,15 +412,18 @@ body {
   .about-text h2 {
     margin-bottom: 1rem;
   }
-  
+  .about-image{
+    width: 40%;;
+  }
   .about-image img {
-    max-width: 410px;
-    width: 100%;
     clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%);
     transform: scale(1);
     transition: transform 0.6s ease, clip-path 0.6s ease, filter 0.6s;
     filter: grayscale(20%) brightness(1.1);
     border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1365 / 2048;
   }
   
   .about-image img:hover {
@@ -450,6 +456,9 @@ body {
     }
     .spotify-section{
       padding: 1rem 5%;
+    }
+    .about-image, .about-text{
+      width: 100%;
     }
   }
 
