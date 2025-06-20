@@ -645,7 +645,7 @@ body {
   color: #000;
 }
 
-.release-date {
+.release-date , .track-title strong{
   font-size: 1.5rem;
   color: #000;
   margin-bottom: 1rem;
