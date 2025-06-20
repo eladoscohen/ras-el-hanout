@@ -8,45 +8,45 @@ function playShowreel() {
   }
   
   // Fade-up on scroll
-  document.addEventListener("DOMContentLoaded", () => {
-    const faders = document.querySelectorAll(".fade-up");
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const faders = document.querySelectorAll(".fade-up");
   
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
+  //   const observer = new IntersectionObserver(
+  //     (entries, obs) => {
+  //       entries.forEach(entry => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add("in-view");
   
-            // Lazy-load only when needed
-            if (
-              entry.target.classList.contains("spotify-facade") &&
-              entry.target.dataset.loaded !== "true"
-            ) {
-              entry.target.innerHTML = `
-                <iframe
-                  src="https://open.spotify.com/embed/artist/1PkpTahGsmKBs4RadyK0EB?utm_source=generator&theme=0"
-                  width="100%"
-                  height="352"
-                  frameborder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              `;
-              entry.target.dataset.loaded = "true";
-            }
+  //           // Lazy-load only when needed
+  //           if (
+  //             entry.target.classList.contains("spotify-facade") &&
+  //             entry.target.dataset.loaded !== "true"
+  //           ) {
+  //             entry.target.innerHTML = `
+  //               <iframe
+  //                 src="https://open.spotify.com/embed/artist/1PkpTahGsmKBs4RadyK0EB?utm_source=generator&theme=0"
+  //                 width="100%"
+  //                 height="352"
+  //                 frameborder="0"
+  //                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  //                 loading="lazy"
+  //               ></iframe>
+  //             `;
+  //             entry.target.dataset.loaded = "true";
+  //           }
   
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px"
-      }
-    );
+  //           obs.unobserve(entry.target);
+  //         }
+  //       });
+  //     },
+  //     {
+  //       threshold: 0.2,
+  //       rootMargin: "0px 0px -50px 0px"
+  //     }
+  //   );
   
-    faders.forEach(el => observer.observe(el));
-  });
+  //   faders.forEach(el => observer.observe(el));
+  // });
   
   /* Menu */
 
