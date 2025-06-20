@@ -199,6 +199,7 @@ body {
     height: 90vh;
     min-height: 90vh;
     overflow: hidden;
+    max-height: 700px;
   }
   
   .parallax-video {
