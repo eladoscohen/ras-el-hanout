@@ -653,6 +653,9 @@ body {
   color: #000;
   margin-bottom: 1rem;
 }
+.release-date strong, .track-title strong{
+  font-weight: 800 !important;
+}
 
 @media (max-width: 768px) {
   .release-content {
