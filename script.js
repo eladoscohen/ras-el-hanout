@@ -140,15 +140,15 @@ function toggleMenu() {
   });
   
   /* Parllex main banner */
-  window.addEventListener('load', () => {
-    const video = document.querySelector('.parallax-video video');
-    if (video) {
-      window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        video.style.transform = `translateY(${scrollY * 0.3}px)`;
-      });
-    }
-  });
+  // window.addEventListener('load', () => {
+  //   const video = document.querySelector('.parallax-video video');
+  //   if (video) {
+  //     window.addEventListener('scroll', () => {
+  //       const scrollY = window.scrollY;
+  //       video.style.transform = `translateY(${scrollY * 0.3}px)`;
+  //     });
+  //   }
+  // });
   
   /* close menu on link click */
   document.querySelectorAll('#menuDrawer a[href^="#"]').forEach(link => {

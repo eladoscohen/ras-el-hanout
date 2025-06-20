@@ -195,6 +195,7 @@ body {
   }
   
   .parallax-video {
+    aspect-ratio: 16 / 9;
     position: absolute;
     top: 0;
     left: 0;
@@ -202,6 +203,8 @@ body {
     height: 150%; /* parallax effect */
     z-index: -1;
     overflow: hidden;
+    will-change: transform;
+
   }
   
   .parallax-video iframe {
