@@ -79,8 +79,12 @@ function toggleMenu() {
   
   /* New Release Timer */
 
-  function startCountdown(releaseDateStr) {
+  function startCountdown() {
     const countdownEl = document.getElementById('countdown');
+    const releaseTag = document.querySelector('.release-date[data-release]');
+    if (!countdownEl || !releaseTag) return;
+  
+    const releaseDateStr = releaseTag.dataset.release;
     const releaseDate = new Date(releaseDateStr).getTime();
   
     function updateTimer() {
@@ -107,11 +111,10 @@ function toggleMenu() {
     setInterval(updateTimer, 1000);
   }
   
+  document.addEventListener('DOMContentLoaded', startCountdown);
+
   /* Newsletter Form */
-  window.addEventListener('DOMContentLoaded', function () {
-    startCountdown("2025-07-20T00:00:00"); // Set your actual release date/time
-  });
-  
+
   document.getElementById('newsletter-form').addEventListener('submit', function (e) {
     e.preventDefault();
   
