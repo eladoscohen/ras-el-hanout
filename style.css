@@ -893,6 +893,11 @@ body {
   border-left-color: #fefefe;
 }
 
+.shows-section .section-title{
+  margin-bottom: 3rem;
+  
+}
+
 @media screen and (max-width: 700px) {
   .video-clip-bottom,
 .video-clip-top {
