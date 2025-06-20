@@ -194,10 +194,6 @@ function toggleMenu() {
   });
   
 
-    lazySpotifyEmbeds.forEach(el => observer.observe(el));
-  });
-
-
   document.addEventListener("DOMContentLoaded", function () {
     const facades = document.querySelectorAll(".youtube-facade");
 
