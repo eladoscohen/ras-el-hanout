@@ -309,9 +309,7 @@ body {
     text-align: center;
   }
 
-  .gallery{
-    min-height: 2400px;
-  }
+
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
@@ -1009,4 +1007,12 @@ body {
 
 .spotify-embed{
   min-height: 352px;
+}
+
+.gallery{
+  min-height: 2400px;
+}
+.newsletter-section,
+.contact-section {
+min-height: 400px; /* adjust to your layout */
 }
