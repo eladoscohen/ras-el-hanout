@@ -423,8 +423,8 @@ body {
     border-radius: 10px;
     max-width: 100%;
     width: 100%;
-    aspect-ratio: 1365 / 2048;
     object-fit: contain;
+    height: auto;
   }
   
   .about-image img:hover {
