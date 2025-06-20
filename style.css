@@ -361,14 +361,14 @@ body {
 /* Fade-up animation on scroll */
 .fade-up {
     opacity: 0;
-    transform: translateY(60px);
+    /* transform: translateY(60px); */
     transition: all 0.8s ease-out;
-    will-change: transform, opacity;
+    will-change:opacity;
   }
   
   .fade-up.in-view {
     opacity: 1;
-    transform: translateY(0);
+    /* transform: translateY(0); */
   }
   
   /* About Section Enhancements */
