@@ -308,6 +308,10 @@ body {
   .gallery, .spotify-section{
     text-align: center;
   }
+
+  .gallery{
+    min-height: 2400px;
+  }
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
