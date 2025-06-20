@@ -835,13 +835,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: #0E2243;
   border-radius: 50%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   pointer-events: none;
 }
 
@@ -850,9 +852,20 @@ body {
   display: block;
   width: 0;
   height: 0;
-  border-left: 18px solid #fff;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
+  border-left: 20px solid #fff;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  transition: border-left-color 0.2s ease;
+}
+
+/* Optional hover effect — if clickable wrapper used */
+.play-btn-wrapper:hover .play-btn {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.play-btn-wrapper:hover .play-btn::before {
+  border-left-color: #fefefe;
 }
 
 @media screen and (max-width: 700px) {
