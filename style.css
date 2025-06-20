@@ -202,7 +202,7 @@ body {
   }
   
   .parallax-video {
-    aspect-ratio: 16 / 9;
+    /* aspect-ratio: 16 / 9; */
     /* position: absolute;
     top: 0;
     left: 0; */
