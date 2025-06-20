@@ -189,6 +189,7 @@ body {
   .hero {
     position: relative;
     height: 90vh;
+    min-height: 90vh;
     overflow: hidden;
   }
   
@@ -444,6 +445,7 @@ body {
   @media screen and (max-width: 700px){
     .hero {
       height: 60vh;
+      min-height: 60vh;
     }
     .spotify-section{
       padding: 1rem 5%;

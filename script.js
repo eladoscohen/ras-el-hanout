@@ -36,7 +36,9 @@ function playShowreel() {
   }
   
   window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
+  window.addEventListener('load', () => {
+    setTimeout(revealOnScroll, 300);
+  });
   
   /* Menu */
 
