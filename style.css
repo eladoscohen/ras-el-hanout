@@ -592,7 +592,9 @@ body {
 
 .release-image {
   flex: 1 1 40%;
-  text-align: center;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 800px;
 }
 
 .release-image img {
@@ -601,6 +603,8 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   width: 100%;
   height: auto;
+   display: block ;
+  
 }
 
 
