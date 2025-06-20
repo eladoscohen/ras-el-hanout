@@ -8,36 +8,44 @@ function playShowreel() {
   }
   
   // Fade-up on scroll
-  const faders = document.querySelectorAll('.fade-up');
-
-  function revealOnScroll() {
-    faders.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const triggerPoint = window.innerHeight * 0.8;
-      if (rect.top < triggerPoint) {
-        el.classList.add('in-view');
+  document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll(".fade-up");
   
-        // Lazy-load Spotify iframe when in view
-        if (el.classList.contains('spotify-facade') && el.dataset.loaded !== 'true') {
-          el.innerHTML = `
-            <iframe
-              src="https://open.spotify.com/embed/artist/1PkpTahGsmKBs4RadyK0EB?utm_source=generator&theme=0"
-              width="100%"
-              height="352"
-              frameborder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          `;
-          el.dataset.loaded = 'true';
-        }
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+  
+            // Lazy-load only when needed
+            if (
+              entry.target.classList.contains("spotify-facade") &&
+              entry.target.dataset.loaded !== "true"
+            ) {
+              entry.target.innerHTML = `
+                <iframe
+                  src="https://open.spotify.com/embed/artist/1PkpTahGsmKBs4RadyK0EB?utm_source=generator&theme=0"
+                  width="100%"
+                  height="352"
+                  frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              `;
+              entry.target.dataset.loaded = "true";
+            }
+  
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px"
       }
-    });
-  }
+    );
   
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', () => {
-    setTimeout(revealOnScroll, 300);
+    faders.forEach(el => observer.observe(el));
   });
   
   /* Menu */
