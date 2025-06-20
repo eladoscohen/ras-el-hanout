@@ -496,7 +496,7 @@ body {
 
 .shows-section {
   position: relative;
-  padding-bottom: 6rem; /* give space for clip */
+  padding-bottom: 4rem; 
 }
 /* Card grid */
 .shows-grid {
