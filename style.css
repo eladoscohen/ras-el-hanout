@@ -836,11 +836,23 @@ body {
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/e/ef/YouTube_play_button_icon_(2013-2017).svg') no-repeat center center;
-  background-size: contain;
+  background-color: #0E2243;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 
+.play-btn::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 18px solid #fff;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
 
 @media screen and (max-width: 700px) {
   .video-clip-bottom,
