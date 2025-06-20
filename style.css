@@ -335,16 +335,22 @@ body {
   .item.square {
     grid-column: span 3;
     grid-row: span 3;
+    aspect-ratio: 1 / 1;
+
   }
   
   .item.wide {
     grid-column: span 6;
     grid-row: span 3;
+    aspect-ratio: 2 / 1;
+
   }
   
   .item.tall {
     grid-column: span 3;
     grid-row: span 6;
+    aspect-ratio: 1 / 2;
+
   }
   
   .item.wide.tall {
