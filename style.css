@@ -279,7 +279,9 @@ body {
   {
     width: 100%;
   }
-  
+  .button:hover{
+    color: #fff;
+  }
   .hero-buttons button span,
   .hero-buttons button {
     z-index: 1;
