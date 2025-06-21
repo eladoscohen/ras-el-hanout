@@ -134,39 +134,34 @@ function toggleMenu() {
   document.addEventListener('DOMContentLoaded', startCountdown);
 
   /* Newsletter Form */
-
- document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+document.getElementById('newsletter-form').addEventListener('submit', function (e) {
   e.preventDefault();
-
   const form = e.target;
   const status = document.getElementById('form-status');
 
-  const recaptchaResponse = grecaptcha.getResponse();
-  if (!recaptchaResponse) {
-    status.textContent = "Please complete the CAPTCHA.";
-    status.style.display = "block";
-    return;
-  }
+  grecaptcha.ready(() => {
+    grecaptcha.execute('YOUR_SITE_KEY', { action: 'submit' }).then(token => {
+      const data = new FormData(form);
+      data.append('g-recaptcha-response', token);
 
-  const data = new FormData(form);
-  data.append('g-recaptcha-response', recaptchaResponse); // include the CAPTCHA token
-
-  fetch('https://script.google.com/macros/s/AKfycbzh0kSP9FTG9Ymfh5tXtFgVsMW0NXKNNX_p-s-dAweRxaY13pjPyef4-ADEaXhu1UlG/exec', {
-    method: 'POST',
-    body: data,
-  })
-    .then(response => response.text())
-    .then(text => {
-      status.textContent = "Thanks for subscribing!";
-      status.style.display = "block";
-      form.reset();
-      grecaptcha.reset(); // reset the CAPTCHA widget
-    })
-    .catch(err => {
-      console.error('Error:', err);
-      status.textContent = "Something went wrong. Please try again later.";
+      fetch('https://script.google.com/macros/s/AKfycbzh0kSP9FTG9Ymfh5tXtFgVsMW0NXKNNX_p-s-dAweRxaY13pjPyef4-ADEaXhu1UlG/exec', {
+        method: 'POST',
+        body: data,
+      })
+        .then(res => res.text())
+        .then(text => {
+          status.textContent = "Thanks for subscribing!";
+          status.style.display = "block";
+          form.reset();
+        })
+        .catch(err => {
+          console.error(err);
+          status.textContent = "Something went wrong. Please try again later.";
+        });
     });
+  });
 });
+
 
   
   /* Parllex main banner */
