@@ -7,6 +7,11 @@ body {
     background-color: #fcfcfc;
     color: #000;
   }
+
+  img, video {
+  max-width: 100%;
+  height: auto;
+}
   /* Header */
 
   h1 {
