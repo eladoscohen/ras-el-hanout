@@ -1,11 +1,31 @@
-
 function playShowreel() {
-    alert("Play showreel clicked - replace with modal or video popup logic");
-  }
+  if (document.querySelector('.showreel')) return; // avoid duplicates
+
+  const overlay = document.createElement('div');
+  overlay.className = 'showreel';
+
+  overlay.innerHTML = `
+    <div class="overlay-inner">
+      <button class="close-btn" aria-label="Close video">✕</button>
+      <iframe
+        src="https://player.vimeo.com/video/1095221400?autoplay=1&title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+      ></iframe>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  overlay.querySelector('.close-btn').addEventListener('click', () => {
+    document.body.removeChild(overlay);
+  });
+}
+
   
-  function bookShow() {
-    window.location.href = "mailto:booking@raselhanout.com";
-  }
   
   // Fade-up on scroll
   document.addEventListener("DOMContentLoaded", () => {
