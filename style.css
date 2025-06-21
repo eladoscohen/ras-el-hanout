@@ -926,7 +926,7 @@ body {
 }
 
 .video-clip-top {
-  top: 0;
+  top: -1px;
 }
 
 
@@ -967,6 +967,9 @@ body {
 }
 .menu-drawer .header-icons{
   visibility: visible ;
+}
+.countdown {
+    gap: 0.7rem;
 }
 .countdown div{
   flex: 1 1 25%;
