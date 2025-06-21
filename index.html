@@ -26,6 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap"></noscript>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 </head>
@@ -275,6 +276,8 @@
         <input type="text" name="name" placeholder="Your Name (optional)">
         <input type="email" name="email" placeholder="Your Email *" required>
         <input type="text" name="phone" placeholder="Your Phone (optional)">
+          <div class="g-recaptcha" data-sitekey="6Lfl9WgrAAAAAAWdRlhoeNJvF0qTD0W3OUF-U6Pm"></div>
+
         <button type="submit">Subscribe</button>
         <p class="form-status" id="form-status"></p>
       </form>
