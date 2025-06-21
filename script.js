@@ -140,7 +140,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
   const status = document.getElementById('form-status');
 
   grecaptcha.ready(() => {
-    grecaptcha.execute('YOUR_SITE_KEY', { action: 'submit' }).then(token => {
+    grecaptcha.execute('6Lfl9WgrAAAAAAWdRlhoeNJvF0qTD0W3OUF-U6Pm', { action: 'submit' }).then(token => {
       const data = new FormData(form);
       data.append('g-recaptcha-response', token);
 
