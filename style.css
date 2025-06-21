@@ -1006,6 +1006,10 @@ body {
 }
 
 
+/* Prevent Layout Shift */
+.release-section{
+  min-height: 550px;
+}
 .spotify-embed{
   min-height: 352px;
 }
@@ -1016,4 +1020,26 @@ body {
 .newsletter-section,
 .contact-section {
 min-height: 400px; /* adjust to your layout */
+}
+
+.responsive-video{
+  min-height: 400px;
+}
+
+@media screen and (max-width:700px){
+  .release-section{
+  min-height: 900px;
+}
+.gallery{
+  min-height: 4600px;
+}
+.newsletter-section {
+min-height: 400px; /* adjust to your layout */
+}
+.contact-section {
+min-height: 850px; /* adjust to your layout */
+}
+.responsive-video{
+  min-height: 450px;
+}
 }
