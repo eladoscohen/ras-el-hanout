@@ -1073,3 +1073,9 @@ min-height: 850px; /* adjust to your layout */
   cursor: pointer;
   z-index: 10;
 }
+
+.consent-text{
+ font-size: 0.9rem; 
+ color: #555; 
+ margin-top: 1rem;
+}
