@@ -952,10 +952,7 @@ body {
     text-align: left;
   
 }
-.show-card p {
-    width: 100%;
-  
-}
+
 .release-info .button{
   width: 100%;
 }
@@ -967,7 +964,7 @@ body {
   margin: 0;
 }
 .show-card p{
-  width: 20%;
+  width: 100%;
   margin: 0;
 }
 .header-icons{
