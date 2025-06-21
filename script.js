@@ -244,3 +244,24 @@ function toggleMenu() {
       });
     });
   });
+
+  /* Smooth Scroll */
+  document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const offset = -80; // adjust for your fixed header height
+
+        const top = target.getBoundingClientRect().top + window.scrollY + offset;
+
+        window.scrollTo({
+          top,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
