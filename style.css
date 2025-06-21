@@ -943,11 +943,19 @@ body {
 }
 .show-card{
   flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 1.5rem;
     padding: 1rem;
 }
-
+.show-card h3 {
+    font-size: 1.3rem;
+    text-align: left;
+  
+}
+.show-card p {
+    width: 100%;
+  
+}
 .release-info .button{
   width: 100%;
 }
