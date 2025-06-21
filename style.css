@@ -197,9 +197,8 @@ body {
   .hero {
     position: relative;
     height: 90vh;
-    min-height: 90vh;
+    min-height: 700px;
     overflow: hidden;
-    max-height: 700px;
   }
 
   .parallax-video {
