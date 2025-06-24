@@ -1079,16 +1079,15 @@ min-height: 850px; /* adjust to your layout */
  color: #555; 
  margin-top: 1rem;
 }
-    .icon-wrapper {
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .icon-wrapper:nth-child(1),
-.icon-wrapper:nth-child(2),
-.icon-wrapper:nth-child(3) {
+.icon-wrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:nth-child(-n+3) .icon-wrapper {
   width: 30px;
   height: 30px;
 }
