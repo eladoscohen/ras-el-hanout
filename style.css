@@ -1095,3 +1095,8 @@ min-height: 850px; /* adjust to your layout */
       width: 100%;
       height: 100%;
     }
+
+    .contact-section .social-icons{
+      justify-content: center;
+      margin-top: 40px;
+    }
