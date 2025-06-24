@@ -1088,8 +1088,8 @@ min-height: 850px; /* adjust to your layout */
 }
 
 .social-icons a:nth-child(-n+3) .icon-wrapper {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
     .icon-wrapper svg {
       width: 100%;
